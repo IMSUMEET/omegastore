@@ -23,7 +23,7 @@ const CategoriesSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.35 }}
           className="text-4xl font-bold text-text mb-12 text-center"
         >
           Shop by <span className="text-primary">Categories</span>
@@ -31,13 +31,8 @@ const CategoriesSection = () => {
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {categories?.map((cat, i) => (
-            <CategoryCard
-              key={cat.label}
-              icon={cat.icon}
-              label={cat.label}
-              delay={i * 0.1}
-            />
+          {categories?.map((cat) => (
+            <CategoryCard key={cat.label} icon={cat.icon} label={cat.label} />
           ))}
         </div>
       </div>

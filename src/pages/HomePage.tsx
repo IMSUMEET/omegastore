@@ -4,6 +4,9 @@ import {
   FeatureHighLightsSection,
   ProductGrid,
   CategorySection,
+  NewsLetterSection,
+  TestimonialsSection,
+  Footer,
 } from "@/components";
 
 const HomePage = () => {
@@ -14,6 +17,9 @@ const HomePage = () => {
       <FeatureHighLightsSection />
       <ProductGrid />
       <CategorySection />
+      <NewsLetterSection />
+      <TestimonialsSection />
+      <Footer />
     </>
   );
 };
