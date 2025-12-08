@@ -1,10 +1,19 @@
-import { Navbar, Hero } from "@/components";
+import {
+  Hero,
+  Navbar,
+  FeatureHighLightsSection,
+  ProductGrid,
+  CategorySection,
+} from "@/components";
 
 const HomePage = () => {
   return (
     <>
       <Navbar />
-      {/* <Hero /> */}
+      <Hero />
+      <FeatureHighLightsSection />
+      <ProductGrid />
+      <CategorySection />
     </>
   );
 };

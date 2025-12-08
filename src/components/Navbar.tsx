@@ -3,7 +3,6 @@ import {
   FiGrid,
   FiShoppingCart,
   FiUser,
-  FiChevronDown,
   FiMapPin,
   FiPackage,
 } from "react-icons/fi";
@@ -72,8 +71,8 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="w-full bg-white sticky top-0 z-[100]">
-      {/* TOP BAR — Clean, Modern, Icon-Based */}
+    <header className="w-full bg-white sticky top-0 z-[100] rounded">
+      {/* TOP BAR */}
       <div className="w-full bg-white/80 backdrop-blur-lg shadow-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-6">
           {/* LOGO */}
@@ -122,7 +121,7 @@ export default function Navbar() {
             <button className="relative p-2 rounded-lg hover:bg-gray-100 transition">
               <FiShoppingCart size={22} className="text-gray-800" />
               <span className="absolute -top-1 -right-1 bg-primary text-white text-xs px-1.5 py-0.5 rounded-full">
-                3
+                0
               </span>
             </button>
           </div>
@@ -130,7 +129,8 @@ export default function Navbar() {
       </div>
 
       {/* CATEGORY BAR */}
-      <div className="bg-card/80 backdrop-blur-lg border-t border-b border-white/20 shadow-sm">
+
+      <div className="bg-card/80 backdrop-blur-lg border-t border-b border-white/20 shadow-md">
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center gap-6">
           {departments.map((dept) => (
             <div key={dept.name} className="relative group">

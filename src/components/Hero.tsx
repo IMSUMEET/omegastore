@@ -1,82 +1,88 @@
-const Hero = () => {
+import { featuredProducts } from "@/data";
+
+const HeroSection = () => {
+  // get the latest featured product
+  const product = featuredProducts[featuredProducts.length - 1];
+
   return (
     <section
       className="
         w-full pt-32 pb-20 
         bg-gradient-to-br 
-        from-primary-light/20 via-background to-secondary-light/30
+        from-background via-white to-secondary-light/20
       "
     >
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center px-6">
-        {/* Left Content */}
-        <div className="flex-1 space-y-6">
-          <h2 className="text-5xl md:text-6xl font-extrabold text-text leading-tight">
-            Experience Shopping <br />
-            <span
-              className="
-                bg-gradient-to-r from-primary to-secondary 
-                bg-clip-text text-transparent
-              "
-            >
-              Like Never Before.
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center px-6">
+        {/* LEFT SIDE */}
+        <div className="w- space-y-8">
+          {/* Top Tag */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-card border border-card/50 rounded-full shadow-sm text-text-light">
+            <span className="text-sm">{product.tagline}</span>
+          </div>
+
+          {/* Headline */}
+          <h1 className="text-5xl md:text-6xl font-extrabold text-text leading-tight">
+            {product.title.split(" ")[0]} <br />
+            <span className="text-text">
+              {product.title.replace(product.title.split(" ")[0] + " ", "")}
             </span>
-          </h2>
+          </h1>
 
-          <p className="text-lg text-text-light max-w-lg">
-            OmegaStore brings premium products, lightning-fast delivery, and
-            seamless checkout—powered by a scalable microservice architecture.
-          </p>
+          {/* Sub-content */}
+          <div className="flex flex-col gap-2">
+            <h3 className="text-3xl font-semibold text-primary">
+              {product.featureNumber}
+            </h3>
 
-          <div className="flex gap-4">
-            <button
-              className="
-                px-6 py-3 
-                bg-primary text-white 
-                rounded-xl shadow-lg 
-                hover:bg-primary-dark 
-                transition
-              "
-            >
-              Shop Now
-            </button>
+            <p className="text-lg font-semibold text-text">
+              {product.featureTitle}
+            </p>
 
-            <button
-              className="
-                px-6 py-3 
-                border border-text-light 
-                rounded-xl shadow 
-                hover:bg-card hover:shadow-md 
-                transition
-              "
-            >
-              Explore Deals
-            </button>
+            <p className="text-text-light max-w-md">{product.description}</p>
+          </div>
+
+          {/* CTA */}
+          <button
+            className="
+              inline-flex items-center gap-3 
+              px-8 py-4 
+              bg-primary text-white rounded-full 
+              shadow-lg hover:bg-primary-dark 
+              transition-all text-lg font-medium
+            "
+          >
+            View All Products
+            <span className="w-8 h-8 flex items-center justify-center bg-white text-primary rounded-full shadow">
+              →
+            </span>
+          </button>
+
+          {/* Social Icons */}
+          <div className="flex gap-4 items-center pt-4 text-text-light">
+            <span className="text-sm">Follow us on:</span>
+
+            <div className="flex gap-4 text-xl cursor-pointer">
+              <i className="ri-twitter-fill hover:text-primary"></i>
+              <i className="ri-tiktok-fill hover:text-primary"></i>
+              <i className="ri-youtube-fill hover:text-primary"></i>
+              <i className="ri-instagram-fill hover:text-primary"></i>
+            </div>
           </div>
         </div>
 
-        {/* Right Product Card */}
-        <div className="flex-1 flex justify-center mt-10 md:mt-0">
-          <div
-            className="
-              w-72 h-96 bg-card rounded-3xl shadow-2xl p-6 
-              border border-card/50 
-              hover:scale-105 transform transition duration-300 
-              relative overflow-hidden
-            "
-          >
-            {/* Glow highlights */}
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-primary-light/40 blur-3xl rounded-full"></div>
-            <div className="absolute bottom-0 left-0 w-40 h-40 bg-secondary-light/40 blur-3xl rounded-full"></div>
+        {/* RIGHT SIDE PRODUCT IMAGE */}
+        <div className="flex-1 relative flex justify-center mt-10 md:mt-0">
+          <div className="absolute -top-6 right-20 w-4 h-4 bg-secondary-light/70 rounded-full"></div>
+          <div className="absolute top-10 right-40 w-3 h-3 bg-primary-light/70 rounded-full"></div>
+          <div className="absolute bottom-20 left-10 w-3 h-3 bg-primary/60 rounded-full"></div>
+          <div className="absolute bottom-6 right-16 w-4 h-4 bg-secondary/60 rounded-full"></div>
 
-            {/* Image placeholder */}
-            <div className="w-full h-52 bg-gray-200 rounded-xl mb-4 flex items-center justify-center">
-              <span className="text-text-light">Product Image</span>
-            </div>
-
-            <h3 className="text-xl font-semibold text-text">
-              Featured Product
-            </h3>
-            <p className="text-text-light mt-1">Starting at $199</p>
+          <div className="w-[380px] h-[380px] flex items-center justify-center relative overflow-hidden">
+            <img
+              src={product.image}
+              alt="Featured Product"
+              className="w-full h-full object-contain drop-shadow-2xl scale-190 "
+            />
           </div>
         </div>
       </div>
@@ -84,4 +90,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HeroSection;
