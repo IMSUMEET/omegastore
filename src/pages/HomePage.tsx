@@ -7,7 +7,7 @@ import {
   NewsLetterSection,
   TestimonialsSection,
   Footer,
-} from "@/components";
+} from "@/components/HomePage";
 
 const HomePage = () => {
   return (

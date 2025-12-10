@@ -1,4 +1,4 @@
-import { CategoryCard } from "@/components";
+import { CategoryCard } from "@/components/HomePage";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import type { Category } from "@/types";

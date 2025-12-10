@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 
 const Footer = () => {
   return (
@@ -25,8 +26,12 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold text-text mb-4">Quick Links</h3>
           <ul className="flex flex-col gap-2 text-text-light">
-            <li className="hover:text-primary cursor-pointer">Home</li>
-            <li className="hover:text-primary cursor-pointer">Products</li>
+            <li className="hover:text-primary cursor-pointer">
+              <Link to="/">Home</Link>
+            </li>
+            <li className="hover:text-primary cursor-pointer">
+              <Link to="./products">Products</Link>
+            </li>
             <li className="hover:text-primary cursor-pointer">Categories</li>
             <li className="hover:text-primary cursor-pointer">Deals</li>
           </ul>

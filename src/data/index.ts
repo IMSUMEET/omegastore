@@ -1,5 +1,7 @@
-export { featuredCards } from "./featuredCards";
-export { featuredProducts } from "./featuredProducts";
-export { mockProducts } from "./products";
+export { mockFeaturedCards } from "./mockFeaturedCards";
+export { mockFeaturedProducts } from "./mockFeaturedProducts";
+export { mockProducts } from "./mockProducts";
 export { mockCategories } from "./mockCategories";
-export { testimonials } from "./testimonials";
+export { mockTestimonials } from "./mockTestimonials";
+export { mockPopularProducts } from "./mockPopularProducts";
+export { mockProductsOfMonth } from "./mockProductsOfMonth";

@@ -1,8 +1,8 @@
-import { featuredProducts } from "@/data";
+import { mockProductsOfMonth } from "@/data";
 
 const HeroSection = () => {
   // get the latest featured product
-  const product = featuredProducts[featuredProducts.length - 1];
+  const product = mockProductsOfMonth[mockProductsOfMonth.length - 1];
 
   return (
     <section
@@ -81,7 +81,7 @@ const HeroSection = () => {
             <img
               src={product.image}
               alt="Featured Product"
-              className="w-full h-full object-contain drop-shadow-2xl scale-190 "
+              className="w-full h-full object-contain drop-shadow-2xl "
             />
           </div>
         </div>

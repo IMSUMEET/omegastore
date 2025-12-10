@@ -1,7 +1,7 @@
-import { FeatureCard } from "@/components";
+import { FeatureCard } from "@/components/HomePage";
 import { motion } from "framer-motion";
 import { useCounter } from "@/hooks";
-import { featuredCards } from "@/data";
+import { mockFeaturedCards } from "@/data";
 
 const FeatureHighlightsSection = () => {
   const orders = useCounter(10000, 2000); // animated counter
@@ -22,7 +22,7 @@ const FeatureHighlightsSection = () => {
 
         {/* CARD GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredCards.map((card, index) => (
+          {mockFeaturedCards.map((card, index) => (
             <FeatureCard
               key={card.id}
               icon={card.icon}

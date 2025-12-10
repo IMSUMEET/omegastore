@@ -7,6 +7,8 @@ import {
   FiPackage,
 } from "react-icons/fi";
 
+import { Link } from "react-router-dom";
+
 export default function Navbar() {
   const departments = [
     {
@@ -75,17 +77,21 @@ export default function Navbar() {
       {/* TOP BAR */}
       <div className="w-full bg-white/80 backdrop-blur-lg shadow-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between gap-6">
-          {/* LOGO */}
-          <div className="text-2xl font-bold text-primary tracking-tight">
-            OmegaStore
-          </div>
+          <Link to="/">
+            {/* LOGO */}
+            <div className="text-2xl font-bold text-primary tracking-tight">
+              OmegaStore
+            </div>
+          </Link>
 
           {/* SEARCH BAR */}
           <div className="flex items-center bg-white rounded-xl w-full max-w-xl shadow border border-gray-200">
             {/* Category dropdown icon */}
-            <div className="flex items-center px-3 border-r border-gray-200 cursor-pointer hover:bg-gray-50 rounded-l-xl">
-              <FiGrid size={18} className="text-gray-500" />
-            </div>
+            <Link to="/products">
+              <div className="flex items-center px-3 border-r border-gray-200 cursor-pointer hover:bg-gray-50 rounded-l-xl">
+                <FiGrid size={18} className="text-gray-500" />
+              </div>
+            </Link>
 
             {/* Input */}
             <input

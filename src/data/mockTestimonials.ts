@@ -1,4 +1,4 @@
-export const testimonials = [
+export const mockTestimonials = [
   {
     id: 1,
     name: "Aarav Shah",

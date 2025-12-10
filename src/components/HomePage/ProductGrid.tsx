@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import type { Product } from "@/types";
-import ProductCard from "./ProductCard";
-import { mockProducts } from "@/data";
+import { ProductCard } from "@/components/HomePage";
+import { mockPopularProducts } from "@/data";
 import { motion } from "framer-motion";
 
 const ProductGrid = () => {
@@ -10,7 +10,7 @@ const ProductGrid = () => {
   useEffect(() => {
     // simulate API delay
     const timer = setTimeout(() => {
-      setProducts(mockProducts);
+      setProducts(mockPopularProducts);
     }, 800);
 
     return () => clearTimeout(timer);

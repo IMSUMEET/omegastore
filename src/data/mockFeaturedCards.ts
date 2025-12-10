@@ -1,4 +1,4 @@
-export const featuredCards = [
+export const mockFeaturedCards = [
   {
     id: 1,
     icon: "⏱️",
